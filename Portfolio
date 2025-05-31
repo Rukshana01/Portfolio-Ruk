@@ -1,4 +1,111 @@
-import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { Mail, Instagram, Linkedin } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Instagram, Linkedin } from "lucide-react";
 
-export default function Portfolio() { return ( <div className="p-6 max-w-5xl mx-auto space-y-8"> <header className="text-center"> <h1 className="text-4xl font-bold">S. Rukshana Begam</h1> <p className="text-lg text-muted-foreground"> Graphic Designer | Visual Storyteller | Brand Builder </p> <div className="flex justify-center gap-4 mt-4"> <a href="mailto:ruked05@gmail.com"><Mail /></a> <a href="https://www.instagram.com/SanaInZio" target="_blank"><Instagram /></a> <a href="https://www.linkedin.com/in/rukshanabegam" target
+export default function Portfolio() {
+  return (
+    <div className="p-6 max-w-5xl mx-auto space-y-8">
+      <header className="text-center">
+        <h1 className="text-4xl font-bold">S. Rukshana Begam</h1>
+        <p className="text-lg text-muted-foreground">
+          Graphic Designer | Visual Storyteller | Brand Builder
+        </p>
+        <div className="flex justify-center gap-4 mt-4">
+          <a href="mailto:ruked05@gmail.com"><Mail /></a>
+          <a href="https://www.instagram.com/SanaInZio" target="_blank"><Instagram /></a>
+          <a href="https://www.linkedin.com/in/rukshanabegam" target="_blank"><Linkedin /></a>
+        </div>
+      </header>
 
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+        <p>
+          I'm a passionate graphic designer who blends creativity with strategy to craft designs that tell stories and build brands. Whether it's a logo, poster, or social media graphic, I aim to deliver visuals that are not only beautiful but purposeful.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Design Services</h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Logo Design</li>
+          <li>Branding & Identity</li>
+          <li>Posters & Flyers</li>
+          <li>Brochures & Visiting Cards</li>
+          <li>Social Media Content</li>
+          <li>Web Banners & Thumbnails</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Selected Projects</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            {
+              title: "CSBS Department Logo Design",
+              description: "Won official selection and prize. Logo concept, typography, symbolism using Illustrator and Canva."
+            },
+            {
+              title: "Poster: Augmented Reality in RE",
+              description: "Educational campaign poster using futuristic themes in Adobe Express."
+            },
+            {
+              title: "RSC Travels - Branding Kit",
+              description: "Complete branding for family travel business including logo, brochure, and website."
+            },
+            {
+              title: "Short Film Poster Design",
+              description: "Award-winning cinematic poster design recognized by the Higher Education Minister."
+            },
+            {
+              title: "Instagram Design Series – @SanaInZio",
+              description: "Consistent, niche-targeted posts focused on branding & identity to attract freelance clients."
+            }
+          ].map((project, index) => (
+            <Card key={index}>
+              <CardContent className="p-4">
+                <h3 className="font-semibold text-lg">{project.title}</h3>
+                <p className="text-sm text-muted-foreground mt-2">{project.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Tools I Use</h2>
+        <p>Adobe Illustrator, Adobe Express, Canva Pro, Figma, PowerPoint</p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Certifications</h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Introduction to Graphic Design – Canva</li>
+          <li>MERN Stack Bootcamp – NoviTech R&D</li>
+          <li>Python for Data Science – IBM</li>
+          <li>Cybersecurity – Tech Mahindra Foundation</li>
+          <li>NLP & AI Bootcamps – Vardhaman College & GUVI</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Achievements</h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Best Presenter Award</li>
+          <li>2nd Prize – Project Expo</li>
+          <li>Winner – CSBS Dept. Logo Contest</li>
+          <li>Award for Short Film Poster</li>
+        </ul>
+      </section>
+
+      <section className="text-center mt-10">
+        <h2 className="text-2xl font-semibold mb-4">Let’s Collaborate</h2>
+        <p>
+          Looking to refresh your brand, need a stunning visual, or want consistent content for social media marketing? Let’s make it happen.
+        </p>
+        <Button className="mt-4" asChild>
+          <a href="mailto:ruked05@gmail.com">Email Me</a>
+        </Button>
+      </section>
+    </div>
+  );
+}
